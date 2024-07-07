@@ -5,5 +5,9 @@ title = "Paul Charlesworth"
 [permalinks]
 blog = "/:filename/"
 
+[taxonomies]
+category = "categories"
+tag = "tags"
+
 [params]
 homeText = "You just made a Hugo blog from scratch."

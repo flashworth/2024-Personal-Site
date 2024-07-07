@@ -10,23 +10,16 @@
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>If by Rudyard Kipling</title>
-      <link>http://localhost:1313/if-by-rudyard-kilping-2/</link>
+      <link>http://localhost:1313/if-by-rudyard-kipling/</link>
       <pubDate>Sun, 28 Jan 2024 08:12:22 +0000</pubDate>
-      <guid>http://localhost:1313/if-by-rudyard-kilping-2/</guid>
+      <guid>http://localhost:1313/if-by-rudyard-kipling/</guid>
       <description>If you can keep your head when all about you Are losing theirs and blaming it on you, If you can trust yourself when all men doubt you, But make allowance for their doubting too; If you can wait and not be tired by waiting, Or being lied about, don&amp;rsquo;t deal in lies, Or being hated, don&amp;rsquo;t give way to hating, And yet don&amp;rsquo;t look too good, nor talk too wise:</description>
     </item>
     <item>
-      <title>If by Rudyard Kipling</title>
-      <link>http://localhost:1313/if-by-rudyard-kilping-3/</link>
+      <title>Tasty biscuits</title>
+      <link>http://localhost:1313/dog-biscuits/</link>
       <pubDate>Sun, 28 Jan 2024 08:12:22 +0000</pubDate>
-      <guid>http://localhost:1313/if-by-rudyard-kilping-3/</guid>
-      <description>If you can keep your head when all about you Are losing theirs and blaming it on you, If you can trust yourself when all men doubt you, But make allowance for their doubting too; If you can wait and not be tired by waiting, Or being lied about, don&amp;rsquo;t deal in lies, Or being hated, don&amp;rsquo;t give way to hating, And yet don&amp;rsquo;t look too good, nor talk too wise:</description>
-    </item>
-    <item>
-      <title>If by Rudyard Kipling</title>
-      <link>http://localhost:1313/if-by-rudyard-kilping/</link>
-      <pubDate>Sun, 28 Jan 2024 08:12:22 +0000</pubDate>
-      <guid>http://localhost:1313/if-by-rudyard-kilping/</guid>
+      <guid>http://localhost:1313/dog-biscuits/</guid>
       <description>If you can keep your head when all about you Are losing theirs and blaming it on you, If you can trust yourself when all men doubt you, But make allowance for their doubting too; If you can wait and not be tired by waiting, Or being lied about, don&amp;rsquo;t deal in lies, Or being hated, don&amp;rsquo;t give way to hating, And yet don&amp;rsquo;t look too good, nor talk too wise:</description>
     </item>
   </channel>

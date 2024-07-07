@@ -1,5 +1,5 @@
 +++
-title = 'If by Rudyard Kipling'
+title = 'Tasty biscuits'
 date = 2024-01-28T08:12:22Z
 tags = ["poetry"]
 description = "The setup guide I used to create this site used old poetry for sample content. I spent days reading this poem whilst I was setting up the site and messing with styles. I realised I liked reading it. So here it is, it gets to stay. I hope you like it as much as I do."

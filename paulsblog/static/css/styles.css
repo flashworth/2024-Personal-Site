@@ -115,6 +115,7 @@ of the screen.
     padding-left: 1em;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1em;
     max-width: 800px;
     margin: auto;
 }
@@ -363,4 +364,11 @@ blockquote {
 
 .highlight > * {
     border-radius: 4px;
+}
+
+.list-element {
+    border: solid 1px var(--color-border-component);
+    border-radius: 8px;
+    padding: 1em;
+    grid-column: span 4;
 }
