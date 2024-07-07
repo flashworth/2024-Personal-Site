@@ -1,7 +1,15 @@
 {{ define "main" }}
 <body>
-    <main>
-        <h1>Hello World!</h1>
+    <main class="index-main">
+        <div class="grid">
+            <h1 class="hero-welcome">Hi, I'm Paul</h1>
+            <p class="hero-statement">
+                Engineering manager. Part time partner at Charlesworth Human
+                Performance. I write about leadership and technology.
+            </p>
+            {{ partial "subscriptionForm.html" }}
+            <div></div>
+        </div>
     </main>
 </body>
 {{end}}

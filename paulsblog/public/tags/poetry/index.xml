@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Paul Charlesworth</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Paul Charlesworth</description>
+    <title>Poetry on Paul Charlesworth</title>
+    <link>http://localhost:1313/tags/poetry/</link>
+    <description>Recent content in Poetry on Paul Charlesworth</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Jan 2024 08:12:22 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/poetry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>If by Rudyard Kipling</title>
       <link>http://localhost:1313/if-by-rudyard-kilping-2/</link>

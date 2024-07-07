@@ -1,0 +1,366 @@
+/* WELCOME TO: CSS FOR MY VERY BASIC BLOG */
+
+/*
+
+This is a really simple stylesheet written in vanilla CSS. When I wrote this, I liked Hugo because it doesn't have any shitty dependencies (like anything which uses NOOOODE) but it didn't play well with Tailwind CSS, so I had to use vanilla CSS instead.
+It turned out to be helpful, because althouth this is a simple site, I use some custom grid action for the layout that I don't know tailwind would support that well. (Maybe it does, I'm no expert.)
+I've got some really verbose comments in this file, for my future reference. I tend to leave this blog for long breaks, then return to it and want to totally re-vamp it. Makes writing down my thought process quite important!
+
+I wrote this site in VIM by the way....
+
+*/
+
+/* CLEAR THE  DEFAULTS - EVERY TIME!!*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-feature-settings:
+        "calt" 1,
+        "liga" 1,
+        "zero" 1;
+    font-weight: 450;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    word-wrap: break-word;
+}
+/*
+
+FONTS
+=====
+
+Took me a while to figure this out. I'm using Inter Variable font for most of this site
+this is the font face rule needed to use it for all the usual requirements between 1 and 999 weight */
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/InterVariable.woff2") format("woff2-variations");
+    font-weight: 1 999;
+    display: block;
+}
+
+@font-face {
+    font-family: "InterDisplay";
+    src: url("/fonts/InterDisplay-Bold.woff2") format("woff2-variations");
+    font-weight: 600;
+    display: block;
+}
+
+@font-face {
+    font-family: "Jetbrains-Mono";
+    src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2-variations");
+    font-weight: 400;
+    display: block;
+}
+/*
+
+DEFINE GLOBAL VARIABLES
+=======================
+
+Obvious thing to do. No variables, no DRY.
+
+*/
+:root {
+    --text-color: #000000;
+    --bold-color: #000000;
+    --code-text: #fafafa;
+    --code-background: rgba(0, 0, 0, 0.07);
+    --inline-code-bg: #e2e8f0;
+    --highlight-text: #2563eb;
+    --color-border-component: #e4e4e7;
+    --color-link: #2563eb;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-background: rgb(17, 17, 17);
+        --text-color: #fafafa;
+        --bold-color: #ffffff;
+        --code-background: rgba(255, 255, 255, 0.2);
+        --inline-code-bg: rgb(39, 40, 35);
+        --highlight-text: rgb(39, 40, 35);
+    }
+}
+
+/* I follwed the very specific instructions on how to use Inter from rsms and it included using these rules. They seemed to work */
+
+:root {
+    font-family: "Inter", sans-serif;
+}
+
+.display-block {
+    display: block;
+}
+
+/*
+
+CREATE A GRID FOR THE PROJECT WHICH PUTS ALL THE CONTENT IN A CENTRAL READING COLUMN
+====================================================================================
+
+1. This is a basic blog for now. All of the themes content is within a simple column in the centre of the page. I have used grid to achieve this to give me flexibility later. I like grid for this, rather than a container, because grids play nicely with multiple widths for different elements as they are read by the Hugo templating engine. More later..
+
+2. This grid also provides the L and R margins for the whole of the site's content. see the 1rem minmax colmns. They provide a minimum of 1 rem of padding on either side of the central column no-matter the width
+of the screen.
+
+*/
+
+.index-main {
+    display: flex;
+    margin-bottom: 1200px;
+}
+
+.grid {
+    padding-right: 1em;
+    padding-left: 1em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 800px;
+    margin: auto;
+}
+
+.grid > * {
+    grid-column: 1/-1;
+    min-width: 0;
+}
+
+html {
+    background: var(--body-background);
+}
+
+/* Now ... Lets work on making the pages look nice */
+
+a,
+ul,
+ol,
+p {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    text-decoration: none;
+    line-height: 1.4em;
+}
+
+a {
+    color: var(--color-link);
+}
+
+a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "InterDisplay", sans-serif;
+    font-weight: 600;
+    color: var(--bold-color);
+    margin-top: 1.2em;
+    line-height: 1.2em;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+.hero-welcome {
+    margin-top: 3em;
+}
+.hero-statement {
+    margin-top: 3em;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.hero-image {
+    margin-top: 2em;
+    max-width: 100%;
+}
+
+/* Styling the Buttondown embedded form */
+
+.embeddable-buttondown-form {
+    padding: 1em;
+    border: solid var(--color-border-component) 1px;
+    border-radius: 8px;
+}
+.embeddable-buttondown-form > * {
+    margin: 0;
+}
+
+.embeddable-buttondown-form > p {
+    margin-top: 1em;
+    font-size: 0.8em;
+    color: #52525b;
+}
+
+.embeddable-buttondown-form > h2 {
+    font-size: 1em;
+    margin-top: 0;
+}
+
+.embeddable-buttondown-form > label {
+    margin-top: 1em;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.email-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    margin-top: 0.4em;
+    font-size: 0.8em;
+    max-width: 32em;
+}
+
+.email-input > * {
+    margin-top: 1em;
+    flex: 1;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+.email-input-field {
+    border: solid 1px black;
+    border-radius: 8px 0px 0px 8px;
+    padding-left: 8px;
+    font-family: "jetbrains-mono";
+    color: #52525b;
+}
+
+.subscribe-button {
+    max-width: 8em;
+    border: solid 4px black;
+    border-radius: 0px 8px 8px 0px;
+    padding-left: 4px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+
+.subscribe-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.powered-by {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+/* END - Buttondown embedded from*/
+
+/*Responsive font sizes*/
+
+/* Cleaning up elements so they have uniform margins and no text decoration */
+
+/* This is for when I go: --- in Markdown */
+
+hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: 1px var(--text-color) solid;
+}
+
+/* Unique styles for lists */
+
+ul,
+ol {
+    margin-left: 1em;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 0;
+    opacity: 0.9;
+}
+
+/* Handling the styles for code and code blocks.*/
+
+:not(pre) > code {
+    font-family: "Jetbrains-Mono", monospace;
+    background: var(--code-background);
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+code > * {
+    font-family: "Jetbrains-Mono", monospace;
+    font-size: smaller;
+    line-height: 1.2em;
+}
+
+pre {
+    font-family: "Jetbrains-Mono", monospace;
+    color: var(--code-text);
+    padding: 1em;
+    border-radius: 4px;
+    line-height: 1em;
+}
+
+blockquote {
+    padding-left: 1em;
+    border-left: solid var(--bold-color) 3px;
+}
+
+/* Classes */
+
+.index-heading {
+    margin-bottom: 1em;
+}
+
+.footer {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.footer-home-button {
+    color: var(--text-color);
+    background: none;
+    border-radius: 4px;
+    padding: 0.2em 0.4em;
+    transition: 0.3s;
+}
+
+.footer-home-button:hover {
+    background: var(--highlight-text);
+}
+
+.list-info-title {
+    font-weight: 600;
+    color: var(--bold-color);
+}
+
+.list-info {
+    margin-top: 4px;
+    color: var(--text-color);
+    padding-bottom: 8px;
+    border-bottom: solid black 1px;
+}
+
+.nav-home {
+    font-weight: 600;
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--bold-color);
+}
+
+.highlight > * {
+    border-radius: 4px;
+}
