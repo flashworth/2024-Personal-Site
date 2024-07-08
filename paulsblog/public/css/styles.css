@@ -392,6 +392,7 @@ blockquote {
 }
 
 .list-element-content > h3 > a:hover {
+    transition-duration: 0.2s;
     background: linear-gradient(to bottom right, #6d28d9, #1e40af);
     background-clip: text;
     color: transparent;
@@ -402,6 +403,8 @@ blockquote {
     margin: 0;
     font-size: 0.8rem;
 }
+
+/* SINGLE CODE*/
 
 .single-main {
     padding: 0 1em 0 1em;
