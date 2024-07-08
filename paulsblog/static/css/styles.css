@@ -118,7 +118,7 @@ of the screen.
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1em;
-    max-width: 800px;
+    max-width: 1024px;
     margin: auto;
 }
 
@@ -391,6 +391,10 @@ blockquote {
     @media (min-width: 801px) {
         .list-element {
             grid-column: span 4;
+        }
+
+        .normal-width {
+            grid-column: 2/12;
         }
     }
 }
