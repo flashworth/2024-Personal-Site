@@ -1,0 +1,7 @@
+{{ range (where .Site.Pages "Section" "blog") }} {{ range .Pages }}
+<div class="list-element">
+    <h3>{{ .Title }}</h3>
+    <p>19/01/23</p>
+    <p>{{ .Description }}</p>
+</div>
+{{ end }} {{ end }}
