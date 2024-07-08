@@ -25,6 +25,7 @@ I wrote this site in VIM by the way....
     font-smoothing: antialiased;
     word-wrap: break-word;
 }
+
 /*
 
 FONTS
@@ -53,6 +54,7 @@ this is the font face rule needed to use it for all the usual requirements betwe
     font-weight: 400;
     display: block;
 }
+
 /*
 
 DEFINE GLOBAL VARIABLES
@@ -115,12 +117,12 @@ of the screen.
     padding-left: 1em;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 1em;
+    gap: 1em;
     max-width: 800px;
     margin: auto;
 }
 
-.grid > * {
+.grid>* {
     grid-column: 1/-1;
     min-width: 0;
 }
@@ -156,9 +158,10 @@ h3 {
     font-family: "InterDisplay", sans-serif;
     font-weight: 600;
     color: var(--bold-color);
-    margin-top: 1.2em;
+    margin-top: 1.6em;
     line-height: 1.2em;
     width: 100%;
+    margin-bottom: 1em;
 }
 
 h1 {
@@ -176,6 +179,7 @@ h3 {
 .hero-welcome {
     margin-top: 3em;
 }
+
 .hero-statement {
     margin-top: 3em;
     font-size: 2em;
@@ -194,22 +198,23 @@ h3 {
     border: solid var(--color-border-component) 1px;
     border-radius: 8px;
 }
-.embeddable-buttondown-form > * {
+
+.embeddable-buttondown-form>* {
     margin: 0;
 }
 
-.embeddable-buttondown-form > p {
+.embeddable-buttondown-form>p {
     margin-top: 1em;
     font-size: 0.8em;
     color: #52525b;
 }
 
-.embeddable-buttondown-form > h2 {
+.embeddable-buttondown-form>h2 {
     font-size: 1em;
     margin-top: 0;
 }
 
-.embeddable-buttondown-form > label {
+.embeddable-buttondown-form>label {
     margin-top: 1em;
     font-weight: 600;
     font-size: 1em;
@@ -224,7 +229,7 @@ h3 {
     max-width: 32em;
 }
 
-.email-input > * {
+.email-input>* {
     margin-top: 1em;
     flex: 1;
     padding-top: 0.4em;
@@ -294,14 +299,14 @@ img {
 
 /* Handling the styles for code and code blocks.*/
 
-:not(pre) > code {
+:not(pre)>code {
     font-family: "Jetbrains-Mono", monospace;
     background: var(--code-background);
     padding: 1px 3px;
     border-radius: 3px;
 }
 
-code > * {
+code>* {
     font-family: "Jetbrains-Mono", monospace;
     font-size: smaller;
     line-height: 1.2em;
@@ -362,13 +367,31 @@ blockquote {
     color: var(--bold-color);
 }
 
-.highlight > * {
+.highlight>* {
     border-radius: 4px;
 }
+
+/* Front Page List of Articles */
 
 .list-element {
     border: solid 1px var(--color-border-component);
     border-radius: 8px;
     padding: 1em;
-    grid-column: span 4;
+}
+
+.list-element>p {
+    color: #52525b;
+}
+
+@media (min-width: 601px) {
+    .list-element {
+        grid-column: span 6;
+    }
+
+    @media (min-width: 801px) {
+        .list-element {
+            grid-column: span 4;
+        }
+    }
+}
 }
