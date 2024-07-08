@@ -1,7 +1,9 @@
 {{ range (where .Site.Pages "Section" "blog") }} {{ range .Pages }}
 <div class="list-element">
-    <h3>{{ .Title }}</h3>
-    <p>19/01/23</p>
-    <p>{{ .Description }}</p>
+    <div class="list-element-content">
+        <p class="list-element-date">19/01/23</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Description }}</p>
+    </div>
 </div>
 {{ end }} {{ end }}

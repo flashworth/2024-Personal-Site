@@ -149,7 +149,9 @@ a {
 
 a:hover {
     cursor: pointer;
-    opacity: 0.8;
+    background: linear-gradient(to bottom right, #6d28d9, #1e40af);
+    background-clip: text;
+    color: transparent;
 }
 
 h1,
@@ -178,10 +180,11 @@ h3 {
 
 .hero-welcome {
     margin-top: 3em;
+    margin-bottom: 0;
 }
 
 .hero-statement {
-    margin-top: 3em;
+    margin-top: 2em;
     font-size: 2em;
     font-weight: 500;
 }
@@ -256,7 +259,6 @@ h3 {
 
 .subscribe-button:hover {
     cursor: pointer;
-    opacity: 0.8;
 }
 
 .powered-by {
@@ -344,9 +346,7 @@ blockquote {
     transition: 0.3s;
 }
 
-.footer-home-button:hover {
-    background: var(--highlight-text);
-}
+.footer-home-button:hover {}
 
 .list-info-title {
     font-weight: 600;
@@ -360,13 +360,6 @@ blockquote {
     border-bottom: solid black 1px;
 }
 
-.nav-home {
-    font-weight: 600;
-    font-size: 1em;
-    text-decoration: none;
-    color: var(--bold-color);
-}
-
 .highlight>* {
     border-radius: 4px;
 }
@@ -376,12 +369,40 @@ blockquote {
 .list-element {
     border: solid 1px var(--color-border-component);
     border-radius: 8px;
-    padding: 1em;
 }
 
-.list-element>p {
-    color: #52525b;
+.list-element-content {
+    padding: 1rem;
 }
+
+.list-element-content>p {
+    font-size: 0.9em;
+    color: #52525b;
+    margin-bottom: 0;
+}
+
+.list-element-content>h3 {
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+}
+
+.list-element-content>h3>a {
+    color: var(--text-color);
+}
+
+.list-element-content>h3>a:hover {
+    background: linear-gradient(to bottom right, #6d28d9, #1e40af);
+    background-clip: text;
+    color: transparent;
+}
+
+.list-element-date {
+    font-family: "jetbrains-mono", monospace;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* RESPONSIVE CODE*/
 
 @media (min-width: 601px) {
     .list-element {
