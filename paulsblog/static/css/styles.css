@@ -122,7 +122,7 @@ of the screen.
     margin: auto;
 }
 
-.grid>* {
+.grid > * {
     grid-column: 1/-1;
     min-width: 0;
 }
@@ -202,22 +202,22 @@ h3 {
     border-radius: 8px;
 }
 
-.embeddable-buttondown-form>* {
+.embeddable-buttondown-form > * {
     margin: 0;
 }
 
-.embeddable-buttondown-form>p {
+.embeddable-buttondown-form > p {
     margin-top: 1em;
     font-size: 0.8em;
     color: #52525b;
 }
 
-.embeddable-buttondown-form>h2 {
+.embeddable-buttondown-form > h2 {
     font-size: 1em;
     margin-top: 0;
 }
 
-.embeddable-buttondown-form>label {
+.embeddable-buttondown-form > label {
     margin-top: 1em;
     font-weight: 600;
     font-size: 1em;
@@ -232,7 +232,7 @@ h3 {
     max-width: 32em;
 }
 
-.email-input>* {
+.email-input > * {
     margin-top: 1em;
     flex: 1;
     padding-top: 0.4em;
@@ -301,14 +301,14 @@ img {
 
 /* Handling the styles for code and code blocks.*/
 
-:not(pre)>code {
+:not(pre) > code {
     font-family: "Jetbrains-Mono", monospace;
     background: var(--code-background);
     padding: 1px 3px;
     border-radius: 3px;
 }
 
-code>* {
+code > * {
     font-family: "Jetbrains-Mono", monospace;
     font-size: smaller;
     line-height: 1.2em;
@@ -346,7 +346,8 @@ blockquote {
     transition: 0.3s;
 }
 
-.footer-home-button:hover {}
+.footer-home-button:hover {
+}
 
 .list-info-title {
     font-weight: 600;
@@ -360,7 +361,7 @@ blockquote {
     border-bottom: solid black 1px;
 }
 
-.highlight>* {
+.highlight > * {
     border-radius: 4px;
 }
 
@@ -375,22 +376,22 @@ blockquote {
     padding: 1rem;
 }
 
-.list-element-content>p {
+.list-element-content > p {
     font-size: 0.9em;
     color: #52525b;
     margin-bottom: 0;
 }
 
-.list-element-content>h3 {
+.list-element-content > h3 {
     margin-top: 0.6rem;
     font-size: 1.2rem;
 }
 
-.list-element-content>h3>a {
+.list-element-content > h3 > a {
     color: var(--text-color);
 }
 
-.list-element-content>h3>a:hover {
+.list-element-content > h3 > a:hover {
     background: linear-gradient(to bottom right, #6d28d9, #1e40af);
     background-clip: text;
     color: transparent;
@@ -400,6 +401,20 @@ blockquote {
     font-family: "jetbrains-mono", monospace;
     margin: 0;
     font-size: 0.8rem;
+}
+
+.single-main {
+    padding: 0 1em 0 1em;
+    display: flex;
+}
+
+.single-article {
+    max-width: 800px;
+    margin: auto;
+}
+
+.single-article > p {
+    line-height: 1.6em;
 }
 
 /* RESPONSIVE CODE*/
@@ -419,4 +434,5 @@ blockquote {
         }
     }
 }
-}
+
+/*STYLING THE SINGLE PAGES (E.G. THE BLOG POSTS)*/
