@@ -412,7 +412,7 @@ blockquote {
 }
 
 .list-element .content h3 a:hover {
-    transition-duration: 0.2s;
+    transition-duration: 0.8s;
     background: var(--color-link-linear-gradient);
     background-clip: text;
     color: transparent;
