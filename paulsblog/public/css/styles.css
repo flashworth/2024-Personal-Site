@@ -107,14 +107,13 @@ of the screen.
 
 */
 
-.index-main {
+main {
+    padding: 0 1em 0 1em;
     display: flex;
-    margin-bottom: 1200px;
+    margin-bottom: 400px;
 }
 
 .grid {
-    padding-right: 1em;
-    padding-left: 1em;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1em;
@@ -365,46 +364,52 @@ blockquote {
     border-radius: 4px;
 }
 
-/* Front Page List of Articles */
+/* COMPONENT: list.html ============================================ */
+/* COMPONENT: list.html ============================================ */
+/* COMPONENT: list.html ============================================ */
 
 .list-element {
     border: solid 1px var(--color-border-component);
     border-radius: 8px;
 }
 
-.list-element-content {
+.list-element .content {
     padding: 1rem;
 }
 
-.list-element-content > p {
+.list-element .content p {
     font-size: 0.9em;
     color: #52525b;
     margin-bottom: 0;
 }
 
-.list-element-content > h3 {
+.list-element .content h3 {
     margin-top: 0.6rem;
     font-size: 1.2rem;
 }
 
-.list-element-content > h3 > a {
+.list-element .content h3 a {
     color: var(--text-color);
 }
 
-.list-element-content > h3 > a:hover {
+.list-element .content h3 a:hover {
     transition-duration: 0.2s;
     background: linear-gradient(to bottom right, #6d28d9, #1e40af);
     background-clip: text;
     color: transparent;
 }
 
-.list-element-date {
+.list-element .date {
     font-family: "jetbrains-mono", monospace;
     margin: 0;
     font-size: 0.8rem;
 }
 
-/* SINGLE CODE*/
+/*END ==================================================*/
+/*END ==================================================*/
+/*END ==================================================*/
+
+/* COMPONENT: single.html ============================================ */
 
 .single-main {
     padding: 0 1em 0 1em;
@@ -416,7 +421,7 @@ blockquote {
     margin: auto;
 }
 
-.single-article > p {
+.single-article p {
     line-height: 1.6em;
 }
 
