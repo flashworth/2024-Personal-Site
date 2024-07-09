@@ -72,6 +72,15 @@ Obvious thing to do. No variables, no DRY.
     --highlight-text: #2563eb;
     --color-border-component: #e4e4e7;
     --color-link: #2563eb;
+    --color-list-element-p: #525252;
+    --color-flashy-border: black;
+    --color-subscribe-button: black;
+    --color-subscribe-button-text: #fffff2;
+    --color-link-linear-gradient: linear-gradient(
+        to bottom right,
+        #6d28d9,
+        #1e40af
+    );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,9 +88,22 @@ Obvious thing to do. No variables, no DRY.
         --body-background: rgb(36, 36, 36);
         --text-color: #fffff2;
         --bold-color: #ffffff;
+        --heading-color: #ffffff;
+        --color-link: #b45309;
+        --color-list-element-p: #e5e5e5;
+        --color-border-component: #404040;
+        --color-flashy-border: #404040;
         --code-background: rgba(255, 255, 255, 0.2);
+        --color-subscribe-button: #0a0a0a;
+        --color-subscribe-button-text: #fafafa;
         --inline-code-bg: rgb(39, 40, 35);
         --highlight-text: rgb(39, 40, 35);
+        --color-link-linear-gradient: linear-gradient(
+            to bottom right,
+            #f97316,
+            #fb923c,
+            #f97316
+        );
     }
 }
 
@@ -148,7 +170,7 @@ a {
 
 a:hover {
     cursor: pointer;
-    background: linear-gradient(to bottom right, #6d28d9, #1e40af);
+    background: var(--color-link-linear-gradient);
     background-clip: text;
     color: transparent;
 }
@@ -209,7 +231,7 @@ h3 {
 .embeddable-buttondown-form > p {
     margin-top: 1em;
     font-size: 0.8em;
-    color: #52525b;
+    color: var(--color-list-element-p);
 }
 
 .embeddable-buttondown-form > h2 {
@@ -234,25 +256,26 @@ h3 {
 .email-input > * {
     margin-top: 1em;
     flex: 1;
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
 }
 
 .email-input-field {
-    border: solid 1px black;
+    border: solid 1px var(--color-flashy-border);
     border-radius: 8px 0px 0px 8px;
     padding-left: 8px;
     font-family: "jetbrains-mono";
-    color: #52525b;
+    background-color: var(--body-background);
+    color: var(--text-color);
 }
 
 .subscribe-button {
     max-width: 8em;
-    border: solid 4px black;
+    border: solid 4px var(--color-subscribe-button);
     border-radius: 0px 8px 8px 0px;
     padding-left: 4px;
-    background-color: black;
-    color: white;
+    background-color: var(--color-subscribe-button);
+    color: var(--color-subscribe-button-text);
     font-weight: 600;
 }
 
@@ -375,7 +398,7 @@ blockquote {
 
 .list-element .content p {
     font-size: 0.9em;
-    color: #52525b;
+    color: var(--color-list-element-p);
     margin-bottom: 0;
 }
 
@@ -390,7 +413,7 @@ blockquote {
 
 .list-element .content h3 a:hover {
     transition-duration: 0.2s;
-    background: linear-gradient(to bottom right, #6d28d9, #1e40af);
+    background: var(--color-link-linear-gradient);
     background-clip: text;
     color: transparent;
 }
