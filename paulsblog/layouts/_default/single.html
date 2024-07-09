@@ -1,11 +1,15 @@
 {{ define "main" }}
 <body>
     <main>
-        <div class="single-article">
-            <h1>{{ .Title }}</h1>
+        <article>
+            <div class="article-heading">
+                <a href="/">Paul Charlesworth</a>
+                <h1>{{ .Title }}</h1>
+                <p>{{ .Date.Format "02 Jan 2006"}}</p>
+            </div>
             {{ .Content }}
-            <a href="/">Home</a>
-        </div>
+            <a class="home" href="/">Home</a>
+        </article>
     </main>
 </body>
 {{ end }}

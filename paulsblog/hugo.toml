@@ -1,6 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Paul Charlesworth"
+author = "Paul Charlesworth"
 
 [permalinks]
 blog = "/:filename/"
@@ -11,3 +12,4 @@ tag = "tags"
 
 [params]
 homeText = "You just made a Hugo blog from scratch."
+author = "Paul Charlesworth"

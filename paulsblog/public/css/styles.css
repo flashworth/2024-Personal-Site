@@ -64,8 +64,8 @@ Obvious thing to do. No variables, no DRY.
 
 */
 :root {
-    --text-color: #000000;
-    --bold-color: #000000;
+    --text-color: #242424;
+    --heading-color: #000000;
     --code-text: #fafafa;
     --code-background: rgba(0, 0, 0, 0.07);
     --inline-code-bg: #e2e8f0;
@@ -76,8 +76,8 @@ Obvious thing to do. No variables, no DRY.
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --body-background: rgb(17, 17, 17);
-        --text-color: #fafafa;
+        --body-background: rgb(36, 36, 36);
+        --text-color: #fffff2;
         --bold-color: #ffffff;
         --code-background: rgba(255, 255, 255, 0.2);
         --inline-code-bg: rgb(39, 40, 35);
@@ -110,7 +110,7 @@ of the screen.
 main {
     padding: 0 1em 0 1em;
     display: flex;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
 }
 
 .grid {
@@ -121,7 +121,7 @@ main {
     margin: auto;
 }
 
-.grid > * {
+.grid * {
     grid-column: 1/-1;
     min-width: 0;
 }
@@ -136,10 +136,10 @@ a,
 ul,
 ol,
 p {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin-top: 1.6em;
     text-decoration: none;
-    line-height: 1.4em;
+    line-height: 1.6em;
+    color: var(--text-color);
 }
 
 a {
@@ -158,7 +158,7 @@ h2,
 h3 {
     font-family: "InterDisplay", sans-serif;
     font-weight: 600;
-    color: var(--bold-color);
+    color: var(--heading-color);
     margin-top: 1.6em;
     line-height: 1.2em;
     width: 100%;
@@ -166,7 +166,7 @@ h3 {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h2 {
@@ -184,6 +184,7 @@ h3 {
 
 .hero-statement {
     margin-top: 2em;
+    margin-bottom: 1em;
     font-size: 2em;
     font-weight: 500;
 }
@@ -217,7 +218,6 @@ h3 {
 }
 
 .embeddable-buttondown-form > label {
-    margin-top: 1em;
     font-weight: 600;
     font-size: 1em;
 }
@@ -266,10 +266,6 @@ h3 {
 }
 
 /* END - Buttondown embedded from*/
-
-/*Responsive font sizes*/
-
-/* Cleaning up elements so they have uniform margins and no text decoration */
 
 /* This is for when I go: --- in Markdown */
 
@@ -411,18 +407,48 @@ blockquote {
 
 /* COMPONENT: single.html ============================================ */
 
-.single-main {
-    padding: 0 1em 0 1em;
-    display: flex;
-}
-
-.single-article {
+article {
     max-width: 655px;
     margin: auto;
+    font-size: 18px;
 }
 
-.single-article p {
+.article-heading {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.article-heading a {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.article-heading p {
+    margin: 0.4em 0 0 0;
+    font-size: 1rem;
+}
+
+.article-heading h1 {
+    margin-bottom: 0;
+}
+
+article p {
     line-height: 1.6em;
+}
+
+article h1 {
+    margin-top: 0;
+}
+
+article h2,
+h3 {
+    font-size: 1.2em;
+    margin-top: 1.8em;
+}
+
+article .home {
+    display: block;
+    margin-top: 1em;
 }
 
 /* RESPONSIVE CODE*/
@@ -430,6 +456,15 @@ blockquote {
 @media (min-width: 601px) {
     .list-element {
         grid-column: span 6;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .article-heading {
+        margin-top: 4em;
+        margin-bottom: 4em;
     }
 
     @media (min-width: 801px) {

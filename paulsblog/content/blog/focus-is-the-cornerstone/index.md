@@ -4,9 +4,16 @@ date = 2024-01-28T08:12:22Z
 tags = ["leadership"]
 description = "I like to think of leadership as an act of subtraction. Think about what you can take away from people's attention to help them focus, rather than what you can push upon them to have them do more. Clarity over pressure."
 draft = false
+author = 'Paul Charlesworth'
 +++
 
 I believe very strongly that the most important role of a leader is to provide focus.
+
+Friends, I used to love Nassim Taleb. Our academic interests are similar, although not quite identical. He enjoys statistics while I enjoy pure mathematics. But we are united by our derivative interest in the philosophy and interpretation of these domains, and in using our rigorous understanding of them to challenge their lazy misapplication elsewhere. He was a trader while I am an investor. But we are again united by our hatred of the influence of mainstream financial economics, particularly a horror called “Modern Portfolio Theory” (“MPT”) which impacts the teaching and practice of trading and investing alike.
+
+MPT is actually quite difficult to debunk. It is rather like the best philosophical paradoxes, for which many have an inarticulable instinct that they just know the answer, while all attempts to explain an answer spiral into circularity or contradiction, if they arise to any meaning whatsoever. And even though everybody knows MPT is wrong, nobody seems to know what to do about that. It doesn’t matter that the map is of the wrong city, it’s the only map we’ve got!
+
+But Taleb has debunked it. That much is clear. The route to resolving the paradox takes us through exactly the fields I mentioned above. Real statistics, real mathematics, real economics, and real finance will get you most of the way. But it is testament to the trickiness of the problem that you arguably need a dose of the interdisciplinary and intrinsically difficult to define complexity science to tie it all together.
 
 I think this is important to say, because I see many people in leadership positions providing little focus, and instead simply being demanding.
 
